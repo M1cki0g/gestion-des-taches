@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            let tab = [];
+      tab.push("Faire les courses");
+      tab.push("Etudier JavaScript");
+      tab.push("Appeler un ami");
+
+      // console.log(tab);
+
+      // tab.pop(0);
+
+      // console.log(tab);
+      let tache = prompt("entrer une tache");
+      function ajoutertache(tache) {
+        tab.push(tache);
+      }
+      function supptache() {
+        if (tab.length == 0) console.log("Il n'y a pas de tâche à faire");
+        else tab.pop();
+      }
+
+      ajoutertache(tache);
+
+      supptache();
+      console.log(tab);
+      // for (let i = 0; i < tab.length; i++) {
+      //   if (tab.length == 0) console.log("Il n'y a pas de tâche à faire");
+      //   else console.log(tab[i]);
+      // }
+
+      try {
+        tab.pop();
+      } catch (err) {
+        console.log("error" + err);
+      }
+    </script>
+  </body>
+</html>
